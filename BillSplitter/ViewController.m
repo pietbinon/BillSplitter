@@ -45,14 +45,29 @@
 - (void) calculateIndividualAmountAndUpdateLabel {
     //Configure variables to do math
     double billAmount = self.billAmountTextField.text.doubleValue;
-    double numberOfEaters = self.numberOfGuestsSlider.value;
+    int numberOfEaters = (int) self.numberOfGuestsSlider.value;
     
     //Do the math
-    double totalAmount = billAmount / numberOfEaters;
+    int totalAmount = billAmount / numberOfEaters;
+    
+    NSString *s = [NSNumberFormatter localizedStringFromNumber: @(totalAmount) numberStyle: NSNumberFormatterCurrencyAccountingStyle];
     
     //Update the labels in the view
-    self.dividedAmountOfBillLabel.text = [NSString stringWithFormat: @"$%.2f", totalAmount];
+    self.dividedAmountOfBillLabel.text = [NSString stringWithFormat: @"%@", s];
+   
+    
+    
+    
+//    NSString *s = [NSNumberFormatter localizedStringFromNumber:@(12.5079) numberStyle:NSNumberFormatterCurrencyAccountingStyle];
+//    
+//    
+//    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+//    f.numberStyle = NSNumberFormatterCurrencyAccountingStyle;
+//    NSString *s1 = [f stringFromNumber:@(12.00989)];
+//    
+//    NSLog(@"%@, %@", s, s1);
 }
+
 
 - (IBAction)calculateSplitAmount:(UIButton *)sender {
     [self calculateIndividualAmountAndUpdateLabel];

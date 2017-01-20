@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfM-wh-heo">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="BSs-R3-UYL"/>
+                                    <constraint firstAttribute="height" constant="30" id="jrR-qA-NLK"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GIR-n4-loq">
+                                <rect key="frame" x="14" y="96" width="347" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heM-ux-Q40">
+                                <rect key="frame" x="164" y="176" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcV-bp-FpX">
+                                <rect key="frame" x="16" y="264" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zcV-bp-FpX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="11n-9O-RIk"/>
+                            <constraint firstItem="heM-ux-Q40" firstAttribute="top" secondItem="GIR-n4-loq" secondAttribute="bottom" constant="50" id="4cw-Yn-V0i"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zcV-bp-FpX" secondAttribute="bottom" constant="382" id="J8O-sC-grX"/>
+                            <constraint firstItem="hfM-wh-heo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="KT0-UX-6wG"/>
+                            <constraint firstItem="zcV-bp-FpX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RIY-Z0-5pj"/>
+                            <constraint firstItem="zcV-bp-FpX" firstAttribute="leading" secondItem="GIR-n4-loq" secondAttribute="leading" id="SJp-lK-Vxp"/>
+                            <constraint firstItem="hfM-wh-heo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UkA-G6-ezT"/>
+                            <constraint firstItem="GIR-n4-loq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fZd-aF-7xR"/>
+                            <constraint firstItem="zcV-bp-FpX" firstAttribute="leading" secondItem="hfM-wh-heo" secondAttribute="leading" id="kMW-PD-OBw"/>
+                            <constraint firstItem="zcV-bp-FpX" firstAttribute="top" secondItem="heM-ux-Q40" secondAttribute="bottom" constant="58" id="oEY-wn-NRv"/>
+                            <constraint firstItem="heM-ux-Q40" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vlQ-UV-Yq6"/>
+                            <constraint firstItem="GIR-n4-loq" firstAttribute="top" secondItem="hfM-wh-heo" secondAttribute="bottom" constant="38" id="z4S-6F-7J6"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>

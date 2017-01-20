@@ -48,7 +48,7 @@
     int numberOfEaters = (int) self.numberOfGuestsSlider.value;
     
     //Do the math
-    int totalAmount = billAmount / numberOfEaters;
+    double totalAmount = billAmount / numberOfEaters;
     
     NSString *s = [NSNumberFormatter localizedStringFromNumber: @(totalAmount) numberStyle: NSNumberFormatterCurrencyAccountingStyle];
     
